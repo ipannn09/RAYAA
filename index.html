@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorryyyyy 😕😕😕</title>
+    <link rel="stylesheet" href="apa.css">
+</head>
+<body>
+
+    <div class="hearts-container"></div>
+
+    <!-- Centered Sentence -->
+    <div >
+        <P class="text">
+            Selamat Hari Raya Awakkk
+        </P>
+        <img src="duit.jpg" class="img">
+        <p class="text2"> ni ada sikit duit raya</p>
+        <a href="text.html" class="center-text"> Ni Last Click La🥺 </a>
+
+    <script src="create.js"></script>
+    </div>
+
+
+    <iframe src="audio.html" width="0" height="0" style="border:none;"></iframe>
+        
+    <audio id="bg-music" autoplay loop>
+        <source src="Uji Rashid & Hail Amir - Seloka Hari Raya (Official Music Video).mp3"audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        let audio = document.getElementById("bg-music");
+    
+        // Check if there is a saved time and resume playback
+        if (localStorage.getItem("audioTime")) {
+            audio.currentTime = localStorage.getItem("audioTime");
+        }
+    
+        audio.play(); // Ensure autoplay
+    
+        // Save the current time before navigating away
+        window.addEventListener("beforeunload", function () {
+            localStorage.setItem("audioTime", audio.currentTime);
+        });
+    </script>
+    
+    
+
+</body>
+</html>
